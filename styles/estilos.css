@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patua+One&display=swap');
+
+:root {
+    
+    --cor--roxo-principal: #653D96;
+    --cor--roxo-rodape: #6133A4;
+    --cor-roxo-letras: #4C1491;
+    --cor-branca:#FFFFFF;
+    --cor-cinza-principal: #A4A4A7;
+ 
+    --cor-secundaria-transparente: rgba(255, 147, 79, 0.7);
+    --cor-da-sombra: rgba(0, 0, 0, 0.25);
+    
+    --font-titulo: 'Patua One', serif;
+    --font-subtitulo: 'Montserrat', sans-serif;
+    --font-texto: 'Open Sans', sans-serif;
+
+}
+
+.principal {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-branca);
+}
