@@ -22,3 +22,57 @@
     min-height: 100vh;
     background-color: var(--cor-branca);
 }
+
+header {
+    display: flex;
+    background-color: var(--cor-branca);
+    height: 83px;
+    border-bottom: 3px solid var(--cor-cinza-principal);
+}
+
+header img {
+    height: 61px;
+    width: 200px;
+}
+
+.nav-superior {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+}
+ 
+.menu-superior {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 16px;
+    font-family: var(--font-principal);
+}
+ 
+.menu-superior__link {
+    color: var(--cor--roxo-principal);
+    text-decoration: none;
+}
+
+
+.botao {
+    width: 172px;
+    height: 50px;
+    background-color: var(--cor--roxo-principal);
+    font-family: var(--font-texto);
+    color: var(--cor-branca);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* deixar texto no centro*/
+    align-items: center;  /* alinhar*/
+    
+}
+
+.botao:hover {
+    background-color: var(--cor-cinza-principal);  /*trocar cor do botão quando passo o mouse em cima idiota*/
+}
+
