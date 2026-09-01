@@ -165,12 +165,24 @@ header img {
     border-radius: 8px;           /* Arredonda os cantos em 8px */
 }
 
+
 /* Link interno da primeira caixa */
 .botoes-container h2 a {
     color: var(--cor-branca);     /* Define o texto do link como branco */
     text-decoration: none;        /* Remove o risco sublinhado do link */
     font-family: var(--font-subtitulo); /* Aplica a fonte Montserrat */
 }
+
+.botoes-container h2:hover {
+    background-color: var(--cor-cinza-principal); 
+    border: 2px solid var(--cor-roxo-letras);
+    color: var(--cor-roxo-letras);
+}
+
+.botoes-container h2 a:hover{
+     color: var(--cor-roxo-letras);
+}
+ 
 
 /* Estilo da caixa do segundo botão com borda (Quero divulgar um animal) */
 .botoes-container h3 {
@@ -186,3 +198,14 @@ header img {
     text-decoration: none;        /* Remove o risco sublinhado do link */
     font-family: var(--font-subtitulo); /* Aplica a fonte Montserrat */
 }
+
+.botoes-container h3:hover {
+    background-color: var(--cor--roxo-principal); 
+    border: 2px solid var(--cor-cinza-borda);
+    color: var(--cor-branca);
+}
+
+.botoes-container h3 a:hover{
+     color: var(--cor-branca);
+}
+ 
