@@ -32,7 +32,7 @@ header {
     display: flex;                /* Ativa o modo de layout flexível */
     background-color: var(--cor-branca); /* Fundo branco para o cabeçalho */
     height: 83px;                 /* Define a altura fixa do cabeçalho em 83 pixels */
-      border: 2px solid var(--cor-cinza-borda);  /* Cria uma linha cinza na parte de baixo */
+    border: 2px solid var(--cor-cinza-borda);  /* Cria uma linha cinza na parte de baixo */
 }
 
 /* Imagem da logo dentro do cabeçalho */
@@ -208,4 +208,46 @@ header img {
 .botoes-container h3 a:hover{
      color: var(--cor-branca);
 }
- 
+.subtitulo {
+width: 100%;                  /* Ocupa a largura até o limite máximo */
+max-width: 1144px; 
+margin: 20px auto; 
+font-size: 32px;
+font-family: var(--font-principal);
+color: var(--cor--roxo-principal);
+flex-direction: column;
+line-height: 2;
+
+}
+
+.subtitulo p {
+margin-top: 64px;
+font-weight: bold; 
+} 
+
+.subtitulo h2 {
+font-size: 20px;
+font-family: var(--font-texto);
+color: var(--cor-preta);   
+margin-bottom: 64px;
+}
+
+.categorias__animais {
+    width: 100%;                  /* Ocupa a largura até o limite máximo */
+    max-width: 1144px; 
+    margin: 20px auto; 
+    display: flex; 
+    justify-content: flex-end;  /* Empurra os elementos para a direita */
+    align-items: flex-end; 
+    gap: 28px;
+    font-family:var(--font-texto) ;
+    font-size: 16px;
+}
+
+.galeria__animais{
+margin-top: 32px;
+grid-template-columns: 1fr 1fr 1fr; /* redimencionar imagens do grid por igual utilização fração e adicionar colunas */
+display: grid;
+column-gap: 16px;
+row-gap: 8px;
+}
