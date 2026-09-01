@@ -7,8 +7,10 @@
     --cor--roxo-rodape: #6133A4;    /* Tom de roxo reservado para o rodapé */
     --cor-roxo-letras: #4C1491;     /* Roxo mais escuro focado nos títulos */
     --cor-branca:#FFFFFF;          /* Cor branca */
-    --cor-cinza-principal: #A4A4A7; /* Cinza para bordas e efeitos de hover */
+    --cor-cinza-principal: #f3f4f6; /* Pagina Principal*/
     --cor-preta: #000000;           /* Cor preta para os textos */
+    --cor-cinza-borda: #A4A4A7; /* Cinza para bordas e efeitos de hover */
+
 
     --cor-secundaria-transparente: rgba(255, 147, 79, 0.7); /* Laranja com transparência */
     --cor-da-sombra: rgba(0, 0, 0, 0.25);                 /* Sombra suave preta */
@@ -22,7 +24,7 @@
 .principal {
     width: 100%;                  /* Ocupa 100% da largura da tela */
     min-height: 100vh;            /* Garante que a altura mínima seja toda a tela visível */
-    background-color: var(--cor-branca); /* Define o fundo da página como branco */
+    background-color: var(--cor-cinza-principal); /* Define o fundo da página como branco */
 }
 
 /* Cabeçalho do site */
@@ -30,7 +32,7 @@ header {
     display: flex;                /* Ativa o modo de layout flexível */
     background-color: var(--cor-branca); /* Fundo branco para o cabeçalho */
     height: 83px;                 /* Define a altura fixa do cabeçalho em 83 pixels */
-    border-bottom: 3px solid var(--cor-cinza-principal); /* Cria uma linha cinza na parte de baixo */
+      border: 2px solid var(--cor-cinza-borda);  /* Cria uma linha cinza na parte de baixo */
 }
 
 /* Imagem da logo dentro do cabeçalho */
@@ -48,6 +50,7 @@ header img {
     flex-direction: row;          /* Coloca os elementos um ao lado do outro na horizontal */
     justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
     align-items: center;          /* Alinha a logo e os links perfeitamente no meio (vertical) */
+    
 }
 
 /* Menu que engloba os links e o botão do topo */
@@ -57,6 +60,7 @@ header img {
     gap: 32px;                    /* Cria um espaço fixo de 32 pixels entre cada link */
     font-size: 16px;              /* Define o tamanho da fonte do menu */
     font-family: var(--font-principal); /* Aplica a fonte definida */
+    
 }
 
 /* Estilo individual dos links do menu */
