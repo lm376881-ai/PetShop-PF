@@ -1,170 +1,184 @@
+/* Importa as fontes externas diretamente do Google Fonts para poder usar no site */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patua+One&display=swap');
 
+/* O :root guarda variáveis de cores e fontes para você reutilizar facilmente no código todo */
 :root {
-    
-    --cor--roxo-principal: #653D96;
-    --cor--roxo-rodape: #6133A4;
-    --cor-roxo-letras: #4C1491;
-    --cor-branca:#FFFFFF;
-    --cor-cinza-principal: #A4A4A7;
-    --cor-preta: #000000;
- 
-    --cor-secundaria-transparente: rgba(255, 147, 79, 0.7);
-    --cor-da-sombra: rgba(0, 0, 0, 0.25);
-    
-    --font-titulo: 'Patua One', serif;
-    --font-subtitulo: 'Montserrat', sans-serif;
-    --font-texto: 'Open Sans', sans-serif;
+    --cor--roxo-principal: #653D96; /* Roxo padrão dos botões e links */
+    --cor--roxo-rodape: #6133A4;    /* Tom de roxo reservado para o rodapé */
+    --cor-roxo-letras: #4C1491;     /* Roxo mais escuro focado nos títulos */
+    --cor-branca:#FFFFFF;          /* Cor branca */
+    --cor-cinza-principal: #A4A4A7; /* Cinza para bordas e efeitos de hover */
+    --cor-preta: #000000;           /* Cor preta para os textos */
 
+    --cor-secundaria-transparente: rgba(255, 147, 79, 0.7); /* Laranja com transparência */
+    --cor-da-sombra: rgba(0, 0, 0, 0.25);                 /* Sombra suave preta */
+    
+    --font-titulo: 'Patua One', serif;         /* Fonte estilizada para títulos grandes */
+    --font-subtitulo: 'Montserrat', sans-serif; /* Fonte para subtítulos e botões */
+    --font-texto: 'Open Sans', sans-serif;      /* Fonte limpa e fácil de ler para textos longos */
 }
 
+/* Container principal da página */
 .principal {
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--cor-branca);
+    width: 100%;                  /* Ocupa 100% da largura da tela */
+    min-height: 100vh;            /* Garante que a altura mínima seja toda a tela visível */
+    background-color: var(--cor-branca); /* Define o fundo da página como branco */
 }
 
+/* Cabeçalho do site */
 header {
-    display: flex;
-    background-color: var(--cor-branca);
-    height: 83px;
-    border-bottom: 3px solid var(--cor-cinza-principal);
+    display: flex;                /* Ativa o modo de layout flexível */
+    background-color: var(--cor-branca); /* Fundo branco para o cabeçalho */
+    height: 83px;                 /* Define a altura fixa do cabeçalho em 83 pixels */
+    border-bottom: 3px solid var(--cor-cinza-principal); /* Cria uma linha cinza na parte de baixo */
 }
 
+/* Imagem da logo dentro do cabeçalho */
 header img {
-    height: 61px;
-    width: 200px;
+    height: 61px;                 /* Define a altura da imagem da logo */
+    width: 200px;                 /* Define a largura da imagem da logo */
 }
 
+/* Container da navegação superior (guarda a logo e os links) */
 .nav-superior {
-    width: 100%;
-    max-width: 1144px; /* Mesma largura do banner */
-    margin: 0 auto;    /* Centraliza na tela */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;                  /* Tenta ocupar a largura total disponível */
+    max-width: 1144px;            /* Impede que o conteúdo se espalhe além de 1144 pixels */
+    margin: 0 auto;               /* Centraliza a caixa na tela (margem automática nas laterais) */
+    display: flex;                /* Organiza os elementos internos usando Flexbox */
+    flex-direction: row;          /* Coloca os elementos um ao lado do outro na horizontal */
+    justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
+    align-items: center;          /* Alinha a logo e os links perfeitamente no meio (vertical) */
 }
- 
+
+/* Menu que engloba os links e o botão do topo */
 .menu-superior {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    font-size: 16px;
-    font-family: var(--font-principal);
+    display: flex;                /* Coloca os links lado a lado */
+    align-items: center;          /* Centraliza os links na vertical */
+    gap: 32px;                    /* Cria um espaço fixo de 32 pixels entre cada link */
+    font-size: 16px;              /* Define o tamanho da fonte do menu */
+    font-family: var(--font-principal); /* Aplica a fonte definida */
 }
- 
+
+/* Estilo individual dos links do menu */
 .menu-superior__link {
-    color: var(--cor--roxo-principal);
-    text-decoration: none;
+    color: var(--cor--roxo-principal); /* Pinta o texto do link com a cor roxa */
+    text-decoration: none;        /* Remove o sublinhado padrão dos links */
 }
 
-
+/* Estilo padrão para botões roxos com preenchimento */
 .botao {
-    width: 172px;
-    height: 50px;
-    background-color: var(--cor--roxo-principal);
-    font-family: var(--font-texto);
-    color: var(--cor-branca);
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center; /* deixar texto no centro*/
-    align-items: center;  /* alinhar*/
-    
+    width: 172px;                 /* Define a largura fixa do botão */
+    height: 50px;                 /* Define a altura fixa do botão */
+    background-color: var(--cor--roxo-principal); /* Cor de fundo do botão */
+    font-family: var(--font-texto); /* Define a fonte do botão */
+    color: var(--cor-branca);     /* Cor do texto do botão (branco) */
+    text-decoration: none;        /* Remove o sublinhado caso o botão seja um link */
+    border-radius: 8px;           /* Arredonda os 4 cantos do botão em 8 pixels */
+    font-size: 20px;              /* Tamanho da letra do botão */
+    display: flex;                /* Ativa o flexbox interno para centralizar a letra */
+    justify-content: center;      /* Centraliza o texto na horizontal dentro do botão */
+    align-items: center;          /* Centraliza o texto na vertical dentro do botão */
 }
 
+/* Efeito quando você passa o ponteiro do mouse por cima do botão */
 .botao:hover {
-    background-color: var(--cor-cinza-principal);  /*trocar cor do botão quando passo o mouse em cima idiota*/
+    background-color: var(--cor-cinza-principal); /* Troca a cor de fundo para cinza */
 }
 
+/* Caixa principal do Banner com a imagem de fundo */
 .banner {
-    width: 100%;
-    max-width: 1144px; /* Mesma largura da nav-superior */
-    margin: 20px auto; /* Centraliza na tela e dá espaçamento topo/base */
-    height: 260px;
-    background-image: url('../assets/banner.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    border-radius: 16px;
-    box-sizing: border-box;
-    padding: 0 40px;
-    justify-content: space-between;
-       
+    width: 100%;                  /* Ocupa a largura total até o limite configurado */
+    max-width: 1144px;            /* Garante o mesmo alinhamento do menu superior */
+    margin: 20px auto;            /* Dá 20px de espaço em cima/baixo e centraliza na tela */
+    height: 260px;                /* Altura fixa da imagem do banner */
+    background-image: url('../assets/banner.png'); /* Caminho da foto do cachorro */
+    background-size: cover;       /* Ajusta a imagem para preencher toda a caixa sem esticar */
+    background-position: center;  /* Centraliza a parte mais importante da foto no meio */
+    background-repeat: no-repeat; /* Impede que a imagem do cachorro se repita */
+    display: flex;                /* Permite organizar o texto da esquerda e da direita */
+    align-items: center;          /* Alinha os textos na altura central do banner */
+    border-radius: 16px;          /* Arredonda as pontas do banner em 16 pixels */
+    box-sizing: border-box;       /* Garante que bordas e espaçamentos não desconfigurem o tamanho */
+    padding: 0 40px;              /* Dá um recuo interno de 40px nas laterais para não colar na borda */
+    justify-content: space-between; /* Afasta o título para a esquerda e o subtítulo para a direita */
 }
 
+/* Limite do bloco do título no lado esquerdo do banner */
 .banner__esquerda {
-max-width: 175px; /* Força o texto a quebrar em 4 linhas */
+    max-width: 175px;             /* Força o texto a quebrar em várias linhas ao atingir 175px */
 }
 
+/* Título principal dentro do banner (Faça a diferença...) */
 .banner h2 {
-    font-family: var(--font-titulo);
-    font-size: 32px;
-    line-height: 1.1;
-    color: var(--cor-roxo-letras);
-    text-align: left;
-    margin: 0;
+    font-family: var(--font-titulo); /* Fonte Patua One */
+    font-size: 32px;              /* Tamanho do título principal */
+    line-height: 1.1;             /* Aproxima as linhas do texto para ficar mais compacto */
+    color: var(--cor-roxo-letras);/* Cor roxo escuro no título */
+    text-align: left;             /* Alinha as frases à esquerda */
+    margin: 0;                    /* Remove margens padrão que o navegador coloca no h2 */
 }
 
+/* Bloco do conteúdo do lado direito do banner (Texto + Botão) */
 .banner__direita {
-    max-width: 300px; /* Limita a largura do texto da direita */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Alinha o texto e o botão para a direita */
-    text-align: center;
-    
+    max-width: 300px;             /* Limita a largura do bloco da direita em 300px */
+    display: flex;                /* Ativa flexbox */
+    flex-direction: column;       /* Empilha o texto (h3) acima do botão */
+    align-items: center;          /* Centraliza o botão e o texto horizontalmente entre si */
+    text-align: center;           /* Centraliza o alinhamento das frases do texto */
 }
 
+/* Subtítulo dentro do bloco da direita */
 .banner h3 {
-    font-family: var(--font-texto);
-    font-size: 18px;
-    color: var(--cor-preta);
-    margin: 0 0 16px 0;
-    line-height: 1.3;
+    font-family: var(--font-texto); /* Fonte Open Sans */
+    font-size: 18px;              /* Tamanho do texto descritivo */
+    color: var(--cor-preta);      /* Cor preta no texto */
+    margin: 0 0 16px 0;           /* Dá 16px de espaço abaixo do texto para afastar do botão */
+    line-height: 1.3;             /* Espaçamento entre as linhas do parágrafo */
 }
 
+/* Destaques em negrito aplicados dentro do h3 */
 .banner h3 strong {
-    color: var(--cor-preta);       /* Cor preta mais intensa para o destaque */
-    font-weight: bold;  /* Aplica o negrito */
+    color: var(--cor-preta);      /* Mantém a cor preta */
+    font-weight: bold;            /* Aplica o peso de negrito na letra */
 }
 
+/* Container que guarda os dois botões inferiores (Quero adotar / Quero divulgar) */
 .botoes-container {
-width: 100%;
-max-width: 1144px; 
-margin: 20px auto;
-display: flex;
-gap: 12px;
-justify-content: center;   
-align-items: center;
-
+    width: 100%;                  /* Ocupa a largura até o limite máximo */
+    max-width: 1144px;            /* Alinha a largura total com o banner e o header */
+    margin: 20px auto;            /* Centraliza a caixa inteira na tela na horizontal */
+    display: flex;                /* Coloca as duas caixas de botões lado a lado */
+    gap: 12px;                    /* Cria um espaço de 12px entre um botão e outro */
+    justify-content: center;      /* Centraliza a dupla de botões no meio da página */
+    align-items: center;          /* Alinha a altura dos botões no centro */
 }
 
+/* Estilo da caixa do primeiro botão (Quero adotar) */
 .botoes-container h2 {
-width: 566px;
-background-color: var(--cor-roxo-letras);
-border: none;
-border-radius: 8px;
+    width: 566px;                 /* Largura fixa da caixa do botão */
+    background-color: var(--cor--roxo-principal); /* Cor de fundo roxa */
+    border: none;                 /* Remove qualquer borda padrão */
+    border-radius: 8px;           /* Arredonda os cantos em 8px */
 }
 
+/* Link interno da primeira caixa */
 .botoes-container h2 a {
-    color: var(--cor-branca); /* Define o branco puro diretamente */
-    text-decoration: none;
+    color: var(--cor-branca);     /* Define o texto do link como branco */
+    text-decoration: none;        /* Remove o risco sublinhado do link */
+    font-family: var(--font-subtitulo); /* Aplica a fonte Montserrat */
 }
 
+/* Estilo da caixa do segundo botão com borda (Quero divulgar um animal) */
 .botoes-container h3 {
-width: 566px;
-background-color: var(--cor-branca);
-border: none;
-border-radius: 8px;
-border: 2px solid #6C42A1;
+    width: 566px;                 /* Largura fixa igual à da primeira caixa */
+    background-color: var(--cor-branca); /* Fundo transparente/branco */
+    border-radius: 8px;           /* Arredonda os cantos em 8px */
+    border: 2px solid var(--cor-roxo-letras); /* Desenha uma borda roxa de 2px de espessura */
 }
 
+/* Link interno da segunda caixa */
 .botoes-container h3 a {
-    color: var(--cor-roxo-letras); /* Define o branco puro diretamente */
-    text-decoration: none;
+    color: var(--cor-roxo-letras);/* Cor do texto do link em roxo escuro */
+    text-decoration: none;        /* Remove o risco sublinhado do link */
+    font-family: var(--font-subtitulo); /* Aplica a fonte Montserrat */
 }
-
