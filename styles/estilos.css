@@ -413,3 +413,29 @@ header img {
     font-family: var(--font-texto);
     color: var(--cor-cinza-borda);
 }
+
+.botao-pesquisa {
+    width: 280px;
+    /* Define a largura fixa do botão */
+    height: 50px;
+    /* Define a altura fixa do botão */
+    background-color: var(--cor-branca);
+    /* Cor de fundo do botão */
+    font-family: var(--font-texto);
+    /* Define a fonte do botão */
+    color: var(--cor--roxo-principal);
+    /* Cor do texto do botão (branco) */
+    text-decoration: none;
+    /* Remove o sublinhado caso o botão seja um link */
+    border-radius: 8px;
+    /* Arredonda os 4 cantos do botão em 8 pixels */
+    font-size: 16px;
+    /* Tamanho da letra do botão */
+    display: flex;
+    /* Ativa o flexbox interno para centralizar a letra */
+    justify-content: center;
+    /* Centraliza o texto na horizontal dentro do botão */
+    align-items: center;
+    /* Centraliza o texto na vertical dentro do botão */
+    margin: 32px auto 0 auto; /* 32px de espaço no topo, auto nas laterais */
+}
