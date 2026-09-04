@@ -1,441 +1,1082 @@
 /* Importa as fontes externas diretamente do Google Fonts para poder usar no site */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patua+One&display=swap');
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+San…);
+
+
 
 /* O :root guarda variáveis de cores e fontes para você reutilizar facilmente no código todo */
+
 :root {
+
     --cor--roxo-principal: #653D96;
+
     /* Roxo padrão dos botões e links */
+
     --cor--roxo-rodape: #6133A4;
+
     /* Tom de roxo reservado para o rodapé */
+
     --cor-roxo-letras: #4C1491;
+
     /* Roxo mais escuro focado nos títulos */
+
     --cor-branca: #FFFFFF;
+
     /* Cor branca */
+
     --cor-cinza-principal: #f3f4f6;
+
     /* Pagina Principal*/
+
     --cor-preta: #000000;
+
     /* Cor preta para os textos */
+
     --cor-cinza-borda: #A4A4A7;
+
     /* Cinza para bordas e efeitos de hover */
+
     --cor-laranja: #f8a836;
 
 
+
+
+
+
+
     --cor-secundaria-transparente: rgba(255, 147, 79, 0.7);
+
     /* Laranja com transparência */
+
     --cor-da-sombra: rgba(0, 0, 0, 0.25);
+
     /* Sombra suave preta */
 
+
+
     --font-titulo: 'Patua One', serif;
+
     /* Fonte estilizada para títulos grandes */
+
     --font-subtitulo: 'Montserrat', sans-serif;
+
     /* Fonte para subtítulos e botões */
+
     --font-texto: 'Open Sans', sans-serif;
+
     /* Fonte limpa e fácil de ler para textos longos */
+
 }
+
+
 
 .container {
+
     width: 1144px;
+
     margin: 0 auto;
+
 }
+
+
 
 /* Container principal da página */
+
 .principal {
 
+
+
     width: 100%;
+
     /* Ocupa 100% da largura da tela */
+
     min-height: 100vh;
+
     /* Garante que a altura mínima seja toda a tela visível */
+
     background-color: var(--cor-cinza-principal);
+
     /* Define o fundo da página como branco */
+
 }
+
+
 
 /* Cabeçalho do site */
+
 header {
+
     display: flex;
+
     /* Ativa o modo de layout flexível */
+
     background-color: var(--cor-branca);
+
     /* Fundo branco para o cabeçalho */
+
     height: 92px;
+
     /* Define a altura fixa do cabeçalho em 83 pixels */
+
     border-bottom: 1px solid var(--cor-cinza-borda);
+
     /* Cria uma linha cinza na parte de baixo */
+
 }
+
+
 
 /* Imagem da logo dentro do cabeçalho */
+
 header img {
+
     height: 61px;
+
     /* Define a altura da imagem da logo */
+
     width: 200px;
+
     /* Define a largura da imagem da logo */
+
 }
+
+
 
 /* Container da navegação superior (guarda a logo e os links) */
+
 .nav-superior {
+
     width: 100%;
+
     /* Tenta ocupar a largura total disponível */
+
     max-width: 1144px;
+
     /* Impede que o conteúdo se espalhe além de 1144 pixels */
+
     margin: 0 auto;
+
     /* Centraliza a caixa na tela (margem automática nas laterais) */
+
     display: flex;
+
     /* Organiza os elementos internos usando Flexbox */
+
     flex-direction: row;
+
     /* Coloca os elementos um ao lado do outro na horizontal */
+
     justify-content: space-between;
+
     /* Empurra a logo para a esquerda e o menu para a direita */
+
     align-items: center;
+
     /* Alinha a logo e os links perfeitamente no meio (vertical) */
 
+
+
 }
+
+
 
 /* Menu que engloba os links e o botão do topo */
+
 .menu-superior {
+
     display: flex;
+
     /* Coloca os links lado a lado */
+
     align-items: center;
+
     /* Centraliza os links na vertical */
+
     gap: 32px;
+
     /* Cria um espaço fixo de 32 pixels entre cada link */
+
     font-size: 16px;
+
     /* Define o tamanho da fonte do menu */
+
     font-family: var(--font-principal);
+
     /* Aplica a fonte definida */
 
+
+
 }
+
+
 
 /* Estilo individual dos links do menu */
+
 .menu-superior__link {
+
     color: var(--cor--roxo-principal);
+
     /* Pinta o texto do link com a cor roxa */
+
     text-decoration: none;
+
     /* Remove o sublinhado padrão dos links */
+
 }
+
+
 
 /* Estilo padrão para botões roxos com preenchimento */
+
 .botao {
+
     width: 172px;
+
     /* Define a largura fixa do botão */
+
     height: 50px;
+
     /* Define a altura fixa do botão */
+
     background-color: var(--cor--roxo-principal);
+
     /* Cor de fundo do botão */
+
     font-family: var(--font-texto);
+
     /* Define a fonte do botão */
+
     color: var(--cor-branca);
+
     /* Cor do texto do botão (branco) */
+
     text-decoration: none;
+
     /* Remove o sublinhado caso o botão seja um link */
+
     border-radius: 8px;
+
     /* Arredonda os 4 cantos do botão em 8 pixels */
+
     font-size: 20px;
+
     /* Tamanho da letra do botão */
+
     display: flex;
+
     /* Ativa o flexbox interno para centralizar a letra */
+
     justify-content: center;
+
     /* Centraliza o texto na horizontal dentro do botão */
+
     align-items: center;
+
     /* Centraliza o texto na vertical dentro do botão */
+
 }
+
+
 
 /* Efeito quando você passa o ponteiro do mouse por cima do botão */
+
 .botao:hover {
+
     background-color: var(--cor-laranja);
+
     /* Troca a cor de fundo para cinza */
+
 }
+
+
 
 /* Caixa principal do Banner com a imagem de fundo */
+
 .banner {
+
     width: 100%;
+
     /* Ocupa a largura total até o limite configurado */
+
     max-width: 1144px;
+
     /* Garante o mesmo alinhamento do menu superior */
+
     margin: 20px auto;
+
     /* Dá 20px de espaço em cima/baixo e centraliza na tela */
+
     height: 260px;
+
     /* Altura fixa da imagem do banner */
+
     background-image: url('../assets/banner.png');
+
     /* Caminho da foto do cachorro */
+
     background-size: cover;
+
     /* Ajusta a imagem para preencher toda a caixa sem esticar */
+
     background-position: center;
+
     /* Centraliza a parte mais importante da foto no meio */
+
     background-repeat: no-repeat;
+
     /* Impede que a imagem do cachorro se repita */
+
     display: flex;
+
     /* Permite organizar o texto da esquerda e da direita */
+
     align-items: center;
+
     /* Alinha os textos na altura central do banner */
+
     border-radius: 16px;
+
     /* Arredonda as pontas do banner em 16 pixels */
+
     box-sizing: border-box;
+
     /* Garante que bordas e espaçamentos não desconfigurem o tamanho */
+
     padding: 0 40px;
+
     /* Dá um recuo interno de 40px nas laterais para não colar na borda */
+
     justify-content: space-between;
+
     /* Afasta o título para a esquerda e o subtítulo para a direita */
+
 }
+
+
 
 /* Limite do bloco do título no lado esquerdo do banner */
+
 .banner__esquerda {
+
     max-width: 175px;
+
     /* Força o texto a quebrar em várias linhas ao atingir 175px */
+
 }
+
+
 
 /* Título principal dentro do banner (Faça a diferença...) */
+
 .banner h2 {
+
     font-family: var(--font-titulo);
+
     /* Fonte Patua One */
+
     font-size: 32px;
+
     /* Tamanho do título principal */
+
     line-height: 1.1;
+
     /* Aproxima as linhas do texto para ficar mais compacto */
+
     color: var(--cor-roxo-letras);
+
     /* Cor roxo escuro no título */
+
     text-align: left;
+
     /* Alinha as frases à esquerda */
+
     margin: 0;
+
     /* Remove margens padrão que o navegador coloca no h2 */
+
 }
+
+
 
 /* Bloco do conteúdo do lado direito do banner (Texto + Botão) */
+
 .banner__direita {
+
     max-width: 300px;
+
     /* Limita a largura do bloco da direita em 300px */
+
     display: flex;
+
     /* Ativa flexbox */
+
     flex-direction: column;
+
     /* Empilha o texto (h3) acima do botão */
+
     align-items: center;
+
     /* Centraliza o botão e o texto horizontalmente entre si */
+
     text-align: center;
+
     /* Centraliza o alinhamento das frases do texto */
+
 }
+
+
 
 /* Subtítulo dentro do bloco da direita */
+
 .banner h3 {
+
     font-family: var(--font-texto);
+
     /* Fonte Open Sans */
+
     font-size: 18px;
+
     /* Tamanho do texto descritivo */
+
     color: var(--cor-preta);
+
     /* Cor preta no texto */
+
     margin: 0 0 16px 0;
+
     /* Dá 16px de espaço abaixo do texto para afastar do botão */
+
     line-height: 1.3;
+
     /* Espaçamento entre as linhas do parágrafo */
+
 }
+
+
 
 /* Destaques em negrito aplicados dentro do h3 */
+
 .banner h3 strong {
+
     color: var(--cor-preta);
+
     /* Mantém a cor preta */
+
     font-weight: bold;
+
     /* Aplica o peso de negrito na letra */
+
 }
+
+
 
 /* Container que guarda os dois botões inferiores (Quero adotar / Quero divulgar) */
+
 .botoes-container {
+
     width: 100%;
+
     /* Ocupa a largura até o limite máximo */
+
     max-width: 1144px;
+
     /* Alinha a largura total com o banner e o header */
+
     margin: 20px auto;
+
     /* Centraliza a caixa inteira na tela na horizontal */
+
     display: flex;
+
     /* Coloca as duas caixas de botões lado a lado */
+
     gap: 12px;
+
     /* Cria um espaço de 12px entre um botão e outro */
+
     justify-content: center;
+
     /* Centraliza a dupla de botões no meio da página */
+
     align-items: center;
+
     /* Alinha a altura dos botões no centro */
+
 }
 
+
+
 /* Estilo da caixa do primeiro botão (Quero adotar) */
+
 .botoes-container h2 {
+
     width: 566px;
+
     /* Largura fixa da caixa do botão */
+
     background-color: var(--cor--roxo-principal);
+
     /* Cor de fundo roxa */
+
     border: none;
+
     /* Remove qualquer borda padrão */
+
     border-radius: 8px;
+
     /* Arredonda os cantos em 8px */
+
 }
+
+
+
 
 
 /* Link interno da primeira caixa */
+
 .botoes-container h2 a {
+
     color: var(--cor-branca);
+
     /* Define o texto do link como branco */
+
     text-decoration: none;
+
     /* Remove o risco sublinhado do link */
+
     font-family: var(--font-subtitulo);
+
     /* Aplica a fonte Montserrat */
+
 }
+
+
 
 .botoes-container h2:hover {
+
     background-color: var(--cor-laranja);
+
     border: 2px solid var(--cor-roxo-letras);
+
     color: var(--cor-roxo-letras);
+
 }
 
+
+
 .botoes-container h2 a:hover {
+
     color: var(--cor-roxo-letras);
+
 }
+
+
+
 
 
 /* Estilo da caixa do segundo botão com borda (Quero divulgar um animal) */
+
 .botoes-container h3 {
+
     width: 566px;
+
     /* Largura fixa igual à da primeira caixa */
+
     background-color: var(--cor-branca);
+
     /* Fundo transparente/branco */
+
     border-radius: 8px;
+
     /* Arredonda os cantos em 8px */
+
     border: 2px solid var(--cor-roxo-letras);
+
     /* Desenha uma borda roxa de 2px de espessura */
+
 }
+
+
 
 /* Link interno da segunda caixa */
+
 .botoes-container h3 a {
+
     color: var(--cor-roxo-letras);
+
     /* Cor do texto do link em roxo escuro */
+
     text-decoration: none;
+
     /* Remove o risco sublinhado do link */
+
     font-family: var(--font-subtitulo);
+
     /* Aplica a fonte Montserrat */
+
 }
+
+
 
 .botoes-container h3:hover {
+
     background-color: var(--cor-laranja);
+
     border: 2px solid var(--cor-cinza-borda);
+
     color: var(--cor-branca);
+
 }
+
+
 
 .botoes-container h3 a:hover {
+
     color: var(--cor-branca);
+
 }
+
+
 
 .subtitulo {
+
     width: 100%;
+
     /* Ocupa a largura até o limite máximo */
+
     max-width: 1144px;
+
     margin: 20px auto;
+
     font-size: 32px;
+
     font-family: var(--font-principal);
+
     color: var(--cor--roxo-principal);
+
     flex-direction: column;
+
     line-height: 2;
 
+
+
 }
+
+
 
 .subtitulo p {
+
     margin-top: 64px;
+
     font-weight: bold;
+
+    margin-bottom: 7px;
+
 }
 
+
+
 .subtitulo h2 {
+
     font-size: 20px;
+
     font-family: var(--font-texto);
+
     color: var(--cor-preta);
+
     margin-bottom: 64px;
+
 }
+
+
+
+
 
 .categorias__animais {
 
+
+
     display: flex;
+
     justify-content: flex-end;
+
     /* Empurra os elementos para a direita */
+
     align-items: flex-end;
+
     gap: 28px;
+
     font-family: var(--font-texto);
+
     font-size: 16px;
+
 }
+
+
+
+
 
 
 
 /* Container que alinha todos os cards lado a lado */
+
 .card-grid {
-  display: grid;
-  /* Cria EXATAMENTE 4 colunas de tamanhos iguais */
-  grid-template-columns: repeat(4, 1fr); 
-  row-gap: 1px;
-  column-gap: 20px;
-  max-width: 1200px;
-  margin-top: 30px;
-  margin-bottom: 32px;
+
+    display: grid;
+
+    /* Cria EXATAMENTE 4 colunas de tamanhos iguais */
+
+    grid-template-columns: repeat(4, 1fr);
+
+    row-gap: 1px;
+
+    column-gap: 20px;
+
+    max-width: 1200px;
+
+    margin-top: 30px;
+
+    margin-bottom: 32px;
+
 }
+
+
 
 /* Card individual */
+
 .card {
+
     width: 100%;
+
     /* Ocupa a largura até o limite máximo */
+
     max-width: 1144px;
+
     margin: 20px auto;
 
+
+
     background-color: var(--cor-branca, #ffffff);
+
     border-radius: 12px;
+
     overflow: hidden;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
     font-family: sans-serif;
+
     display: flex;
+
     flex-direction: column;
+
     /* Deixa foto em cima e texto embaixo */
-    
+
+
+
 }
+
+
 
 /* Imagem adaptada ao card */
+
 .card-imagem {
+
     width: 273px;
+
     /* Preenche os 260px do card */
+
     height: 353px;
+
     object-position: center;
+
     object-fit: cover;
+
     display: block;
+
 }
+
+
 
 .card-conteudo {
+
     padding: 12px 16px 16px 16px;
+
 }
+
+
 
 .card-titulo {
+
     margin: 0;
+
     font-size: 20px;
+
     color: var(--cor--roxo-principal);
+
     font-family: var(--font-texto);
+
     font-weight: bold;
+
 }
+
+
 
 .card-localizacao {
+
     margin: 4px 0 0 0;
+
     font-size: 14px;
+
     font-family: var(--font-texto);
+
     color: var(--cor-cinza-borda);
+
 }
 
+
+
 .botao-pesquisa {
+
     width: 280px;
+
     /* Define a largura fixa do botão */
+
     height: 50px;
+
     /* Define a altura fixa do botão */
+
     background-color: var(--cor-branca);
+
     /* Cor de fundo do botão */
+
     font-family: var(--font-texto);
+
     /* Define a fonte do botão */
+
     color: var(--cor--roxo-principal);
+
     /* Cor do texto do botão (branco) */
+
     text-decoration: none;
+
     /* Remove o sublinhado caso o botão seja um link */
+
     border-radius: 8px;
+
     /* Arredonda os 4 cantos do botão em 8 pixels */
+
     font-size: 16px;
+
     /* Tamanho da letra do botão */
+
     display: flex;
+
     /* Ativa o flexbox interno para centralizar a letra */
+
     justify-content: center;
+
     /* Centraliza o texto na horizontal dentro do botão */
+
     align-items: center;
+
     /* Centraliza o texto na vertical dentro do botão */
-    margin: 32px auto 0 auto; /* 32px de espaço no topo, auto nas laterais */
+
+    margin: 32px auto 0 auto;
+    /* 32px de espaço no topo, auto nas laterais */
+
+}
+
+
+
+.botao-pesquisa:hover {
+
+    background-color: #f8a836;
+
+}
+
+
+
+
+
+.conteudo-principal-posicionar {
+
+
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 24px;
+
+    padding: 0;
+
+    margin: 0;
+
+
+
+}
+
+
+
+.conteudo-principal-adotar {
+    display: flex;
+    border: 1px solid var(--cor-laranja);
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+    font-size: 16px;
+    align-items: flex-start;
+    width: 370px;
+    height: 163px;
+    align-items: center;
+}
+
+
+
+.conteudo-principal-adotar-info {
+
+    font-family: var(--font-subtitulo);
+
+    line-height: 1.3;
+
+    font: 16px;
+
+    margin: 0;
+
+    width: 100%;
+    
+    align-items: flex-start;
+
+
+
+}
+
+
+
+.conteudo-principal-adotar-info h2 {
+
+    margin: 0;
+
+    font-size: inherit;
+
+    font-weight: normal;
+
+    margin-right: 16px;
+
+
+
+}
+
+
+
+.conteudo-principal-adotar-info h2 strong {
+
+    color: var(--cor-roxo-letras);
+
+    font-weight: bold;
+
+    font-size: inherit;
+
+
+
+
+
+}
+
+
+
+.conteudo-principal-adotar img {
+
+    width: 110px;
+
+    height: 140px;
+
+
+
+}
+
+.conteudo-principal-blog {
+    align-items: center;
+    background-color: var(--cor-branca);
+    width: 370px;
+    height: 485px;
+    background-position: center;
+}
+
+
+
+.conteudo-principal-adotar-img-blog {
+
+    width: 370px;
+    height: 485px;
+    border-radius: 8px;
+
+
+}
+
+
+
+.conteudo-principal-posicionar-blog {
+    
+    display: grid;
+
+    /* Cria EXATAMENTE 4 colunas de tamanhos iguais */
+
+    grid-template-columns: repeat(4, 1fr);
+
+    row-gap: 1px;
+
+    column-gap: 20px;
+
+    max-width: 1200px;
+
+    margin-top: 30px;
+
+    margin-bottom: 32px;
+
+}
+.conteudo-principal-adotar-info-blog{
+    font-family: var(--font-subtitulo);
+
+    line-height: 1.3;
+
+    font: 16px;
+
+    margin: 0;
+
+    width: 100%;
+}
+
+.conteudo-principal-adotar-img-blog {
+
+    width: 370px;
+    height: 190px;
+    border-radius: 8px;
+    background-size: 100%;
+
+}
+
+.conteudo-principal-adotar-info-blog{
+    justify-items: center;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.conteudo-principal-adotar-info-blog strong{
+
+    color: var(--cor-roxo-letras);
+    font-family: var(--font-texto);
+    justify-items: center;
+    font-weight: bold;
+    font-size: 20px;
+
+    
+}
+.conteudo-principal-adotar-info-blog h2{
+    color: var(--cor-cinza-borda);
+    font-family: var(--font-texto);
+    justify-items: center;
+    font-size: 16px;
+
+    
 }
