@@ -636,6 +636,10 @@ header img {
  
 }
 
+.botao-dicas:hover {
+    background-color: var(--cor-laranja);
+}
+
 
 
 /* Rodapé */
@@ -695,6 +699,12 @@ header img {
     margin: 0;
     line-height: 1.5;
 
+}
+
+.rodape__conteudo-link{
+    text-decoration: none;
+    color: var(--cor-branca);
+    font-family: var(--font-texto);
 }
 
 .galeria-rodape {
